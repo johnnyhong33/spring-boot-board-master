@@ -2,7 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.2.4.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
 	id 'java'
-	id 'war'
+//	id 'war'
 }
 
 
@@ -10,15 +10,15 @@ group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
-//bootJar {
-//	jar.enabled = true // 빌드시 jar 을 실행
-//}
+bootJar {
+	jar.enabled = true // 빌드시 jar 을 실행
+}
 
-//jar {
-//	manifest { // 빌드시 Main-Class 설정
-//		attributes 'Main-Class': 'com.testing.test.TestingApplication'
-//	}
-//}
+jar {
+	manifest { // 빌드시 Main-Class 설정
+		attributes 'Main-Class': 'com.testing.test.TestingApplication'
+	}
+}
 
 configurations {
 	developmentOnly
@@ -34,11 +34,11 @@ repositories {
 	mavenCentral()
 }
 
-bootWar.enabled=false
-war.enabled=true
+//bootWar.enabled=false
+//war.enabled=true
 
 dependencies {
-	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	//providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.1'
