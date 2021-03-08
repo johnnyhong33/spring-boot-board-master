@@ -24,5 +24,11 @@ public class MemberServiceImpl implements MemberService {
 		memberMapper.insertMemberRole(role);
 	}
 
+	@Override
+	public void loginMember(MemberVO member) {
+		memberMapper.getMember(member);
+
+	}
+
 
 }

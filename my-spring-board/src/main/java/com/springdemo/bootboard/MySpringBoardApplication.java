@@ -15,12 +15,12 @@ import java.util.Optional;
 import java.util.UUID;
 
 @SpringBootApplication
-public class MySpringBoardApplication { // extends SpringBootServletInitializer {
+public class MySpringBoardApplication extends SpringBootServletInitializer {
 
-	//@Override
-	//protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-	//	return application.sources(MySpringBoardApplication.class);
-	//}
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(MySpringBoardApplication.class);
+	}
 
 	public static void main(String[] args) {
 

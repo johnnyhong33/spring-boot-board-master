@@ -22,6 +22,12 @@ public class AccountController {
 	public String showLoginForm() {
 		return "account/login";
 	}
+
+	@PostMapping("/login")
+	public String login(MemberVO member) {
+		memberService.loginMember(member);
+		return "redirect:/home" ;
+	}
 	
 	@GetMapping("/register")
 	public String showRegisterForm() {

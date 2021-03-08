@@ -13,4 +13,5 @@ public interface MemberMapper {
 	void insertMember(MemberVO member);
 	void insertMemberRole(MemberRoleVO role);
 
+	void getMember(MemberVO member) ;
 }
