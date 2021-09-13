@@ -22,15 +22,15 @@ public class MySpringBoardApplication extends SpringBootServletInitializer {
 		return application.sources(MySpringBoardApplication.class);
 	}
 
-	public static void main(String[] args) {
+	 public static void main(String[] args) {
 
 		SpringApplication.run(MySpringBoardApplication.class, args);
 	}
 }
 	@RestController
 	class SessionController{
-//    @Value("${redis.host}")
-//    private String ip = null;
+//--    @Value("${redis.host}")
+//--    private String ip = null;
 
 		private static String ip;
 
